@@ -11,7 +11,7 @@ library(openCyto)
 library(flowWorkspace) 
 library(cowplot)
 
-setwd('C:/Users/spjochems/Dropbox/LUMC/Results/CyTOF/BEAT-COVID/Day5/4.Compensate/')
+setwd('C:/Users/spjochems/Day5/4.Compensate/')
 
 arcsinh5 <- function(x){
   return(asinh(x/5))  
