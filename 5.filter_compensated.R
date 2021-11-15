@@ -6,7 +6,7 @@ library(reshape2)
 library("gridExtra")
 library('reshape2')
 
-setwd('C:\\Users\\spjochems\\Dropbox\\LUMC\\Results\\CyTOF\\BEAT-COVID/Day4/4.Compensate/')
+setwd('C:\\Users\\spjochems\\Day5/4.Compensate/')
 
 files <- list.files(pattern  = 'fcs')
 
@@ -188,14 +188,14 @@ dev.off()
 write.FCS(datImm, filename = paste0('Imm_', files[j]))
 write.FCS(datEp, filename = paste0('Ep_', files[j]))
 
-setwd('C:\\Users\\spjochems\\Dropbox\\LUMC\\Results\\CyTOF\\BEAT-COVID/Day4/4.Compensate/')
+setwd('C:\\Users\\spjochems\\Day5/4.Compensate/')
 
 yields[j,] <- c(keepep_perc, keep_perc)
 
 }
 
 
-setwd('C:\\Users\\spjochems\\Dropbox\\LUMC\\Results\\CyTOF\\BEAT-COVID/Day4/5.Split_cPARP/')
+setwd('C:\\Users\\spjochems\\Day5/5.Split_cPARP/')
 write.table(yields, 'Distribution_per_file.txt', sep = '\t')
 yields <- data.frame(yields)
 yields$ID <- rownames(yields)
