@@ -1,5 +1,5 @@
 rm(list = ls())
-setwd("C:/Users/spjochems/Dropbox/LUMC/Results/CyTOF/BEAT-COVID/BatchCorrection/Days1-5/BatchAdjust/")
+setwd("C:/Users/spjochems/BatchCorrection/Days1-5/BatchAdjust/")
 
 source("BatchAdjust.R")
 library('xlsx')
@@ -36,11 +36,11 @@ md$filename3 <- paste0(md$batch, md$key, md$filename2)
 #rename the files
 file.rename(from = files, to = md$filename3 )
 
-setwd('C:/Users/spjochems/Dropbox/LUMC/Results/CyTOF/BEAT-COVID/BatchCorrection/Days1-5/BatchAdjust/')
+setwd('C:/Users/spjochems/BatchCorrection/Days1-5/BatchAdjust/')
 
 BatchAdjust(
-  basedir="C:/Users/spjochems/Dropbox/LUMC/Results/CyTOF/BEAT-COVID/BatchCorrection/Days1-5/DataPreNormalization/",
-  outdir="C:/Users/spjochems/Dropbox/LUMC/Results/CyTOF/BEAT-COVID/BatchCorrection/Days1-5/BatchAdjust/output",
+  basedir="C:/Users/spjochems/BatchCorrection/Days1-5/DataPreNormalization/",
+  outdir="C:/Users/spjochems/BatchCorrection/Days1-5/BatchAdjust/output",
   channelsFile = "ChannelsToAdjust.txt",
   batchKeyword="Run",
   anchorKeyword = "REF",
@@ -51,5 +51,5 @@ BatchAdjust(
 
 setwd("output/")
 file.rename(to = files, from = md$filename3 )
-setwd("C:/Users/spjochems/Dropbox/LUMC/Results/CyTOF/BEAT-COVID/BatchCorrection/Days1-5/DataPreNormalization/")
+setwd("C:/Users/spjochems/BatchCorrection/Days1-5/DataPreNormalization/")
 file.rename(to = files, from = md$filename3 )
