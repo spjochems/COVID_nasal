@@ -7,7 +7,7 @@ library(reshape2)
 library(ggplot2)
 library(cowplot)
 
-setwd('C:\\Users\\spjochems\\Dropbox\\LUMC\\Results\\CyTOF\\BEAT-COVID/Day5/6.Debarcode_filtered/')
+setwd('C:\\Users\\spjochems\\Day5/6.Debarcode_filtered/')
 
 arcsinh5 <- function(x){
   return(asinh(x/5))  
@@ -24,8 +24,8 @@ for(pattern in c('Imm', 'Ep')){
   dir.create(pattern)
   
 #merge together all files per cell type
-files <- list.files('C:\\Users\\spjochems\\Dropbox\\LUMC\\Results\\CyTOF\\BEAT-COVID/Day5/5.Split_cPARP/standard_better_USETHIS/', pattern  = pattern)
-data <- prepData(x = paste0('C:\\Users\\spjochems\\Dropbox\\LUMC\\Results\\CyTOF\\BEAT-COVID/Day5/5.Split_cPARP/standard_better_USETHIS/' ,files))
+files <- list.files('C:\\Users\\spjochems/Day5/5.Split_cPARP/standard_better_USETHIS/', pattern  = pattern)
+data <- prepData(x = paste0('C:\\Users\\spjochems/Day5/5.Split_cPARP/standard_better_USETHIS/' ,files))
 
 
 setwd(pattern)
