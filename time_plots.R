@@ -2,7 +2,7 @@ library('flowCore')
 library(ggplot2)
 library("gridExtra")
 
-setwd('C:/Users/spjochems/Dropbox/LUMC/Results/CyTOF/BEAT-COVID/Day5/2.Filter_DNA/')
+setwd('C:/Users/spjochems/Day5/2.Filter_DNA/')
 
 files <- list.files(pattern  = 'fcs')
 
