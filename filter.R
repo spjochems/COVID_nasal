@@ -4,7 +4,7 @@ library('flowCore')
 library(ggplot2)
 library("gridExtra")
 
-setwd('C:/Users/spjochems/Dropbox/LUMC/Results/CyTOF/BEAT-COVID/Day5/1.Cytofclean/')
+setwd('C:/Users/spjochems/Day5/1.Cytofclean/')
 
 
 files <- list.files(pattern  = 'fcs')
@@ -57,7 +57,7 @@ for(j in 1:length(files)){
   
   
   
-  setwd("C:/Users/spjochems/Dropbox/LUMC/Results/CyTOF/BEAT-COVID/Day5/2.Filter_DNA")
+  setwd("C:/Users/spjochems/Day5/2.Filter_DNA")
   dir.create('Pics')
   
   #make pictures
