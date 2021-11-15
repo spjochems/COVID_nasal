@@ -1,0 +1,7 @@
+#open manually R3.6.3/bin/R and run following lines to run the cytofclean
+
+mypaths <- .libPaths()[2:1]
+.libPaths(mypaths)
+library(cytofclean)
+setwd('C:/Users/spjochems/Desktop/')
+cytofclean_GUI()
